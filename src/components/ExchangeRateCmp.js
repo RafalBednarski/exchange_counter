@@ -15,9 +15,10 @@ class ExchangeRateCmp extends Component {
     render() {
         return (
             <div>
-                <form onClick={(event) => {event.preventDefault() 
+                <form onClick={(event) => {event.preventDefault() //wywołuje tu metode przesłaną z komponentu Transactions z tutejszym statem
                     this.props.exchangeRate(this.state.term)}}>
-                    <input type='number' name='exchange_rate' value={this.state.term} onChange={this.onInputChange} />
+                    <h5>current PLN rate</h5>    
+                    <input type='number' name='exchange_rate' value={this.state.term} onChange={this.onInputChange} />{/*Tutaj ustawiam tutejszy state*/}
                     <input type="submit" value="Submit"></input>
                 </form>
             </div>
